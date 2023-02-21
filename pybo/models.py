@@ -15,4 +15,4 @@ class Answer(models.Model):
     create_date = models.DateTimeField()
 
     def __str__(self):
-        return self.subject
+        return self.content
