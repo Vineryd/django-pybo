@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* mobile first */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap');
 
@@ -36,4 +37,13 @@
     .auth-form {
         width: 540px;
     }
+=======
+
+textarea {
+    width:100%
+}
+
+input[type=submit] {
+    margin-top:10px;
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 }

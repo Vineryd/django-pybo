@@ -5,6 +5,7 @@
     "**/templates/**/*": "django-txt",
     "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
+<<<<<<< HEAD
 
   "auto-close-tag.activationOnLanguage": [
     "django-html", "html"
@@ -17,15 +18,27 @@
     "html": ["htm", "html", "django-html"]
   },
 
+=======
+  "auto-close-tag.activationOnLanguage": [],
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "unibeautify.language": {
+    "html": ["htm", "html", "django-html"]
+  },
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
   "unibeautify.enabled": true,
   "[django-html]": {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
+<<<<<<< HEAD
   },
   "[cpp]": {
     "editor.formatOnType": false
   },
   "[c]": {
     "editor.formatOnType": false
+=======
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
   }
 }

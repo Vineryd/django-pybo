@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
@@ -54,3 +55,41 @@
 </a>
 
 {% endblock content %}>
+=======
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"/>
+
+<div class="container my-3">
+
+  <table class="table table-hover">
+    <thead>
+      <tr class="thead-dark">
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성일시</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if question_list %}
+        {% for question in question_list %}
+
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>
+              <a href="{% url 'pybo:detail' question.id %}">
+                {{ question.subject }}</a>
+            </td>
+            <td>{{ question.create_date }}</td>
+          </tr>
+        {% endfor %}
+
+      {% else %}
+        <tr>
+          <td colsapn="3">질문이 없습니다.</td>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+  {% if a %}{% endif %}
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274

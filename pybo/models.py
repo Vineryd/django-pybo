@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< HEAD
 from django.contrib.auth.models import User
 
 class Question(models.Model):
@@ -43,3 +44,22 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.content
+=======
+
+# Create your models here.
+class Question(models.Model):
+    subject = models.CharField('제목', max_length=200)
+    content = models.TextField('내용')
+    create_date = models.DateTimeField('생성일')
+
+    def __str__(self):
+        return self.subject
+
+class Answer(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    content = models.TextField()
+    create_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.content
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274

@@ -1,9 +1,14 @@
 from django.urls import path
+<<<<<<< HEAD
 from .views import base_view, question_views, answer_view, comment_view, vote_views
+=======
+from . import views
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 
 app_name = 'pybo'
 
 urlpatterns = [
+<<<<<<< HEAD
     path('', base_view.index, name='index'),                      # 목록 보기
     path('<int:question_id>/', base_view.detail, name='detail'),   # 상세 보기
     path('question/create/', question_views.question_create, name='question_create'),
@@ -26,3 +31,10 @@ urlpatterns = [
     path('vote/answer/<int:answer_id>/', vote_views.vote_answer, name='vote_answer'),
 ]
 
+=======
+    path('', views.index, name='index'),                    # 목록보기
+    path('<int:question_id>/', views.detail, name='detail'), # 상세 보기   <변환함수:변수명>, 
+    path('answer/create/<int:question_id>/', views.answer_create,
+        name='answer_create')
+]
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274

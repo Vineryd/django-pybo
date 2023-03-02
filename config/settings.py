@@ -14,32 +14,52 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+<<<<<<< HEAD
 # print(BASE_DIR)
+=======
+
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = "django-insecure-ji+^axof7bqyur&(i(_11@0^y#22_pvco)bg-a$y9hvv7!1ik-"
+=======
+SECRET_KEY = "django-insecure-)=t#nd)yheqln=(k_&)-ilw14fhk8a+s5vi8^1i^njvbe_+_+x"
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [ '172.30.1.123' , '127.0.0.1', 'localhost' ]
+=======
+ALLOWED_HOSTS = []
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
+<<<<<<< HEAD
     "django.contrib.auth",      # 인증 담당(사용자 관리)
+=======
+    "django.contrib.auth",
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< HEAD
     "bootstrap4",
     "pybo",
     "common"
+=======
+    "pybo"
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 ]
 
 MIDDLEWARE = [
@@ -57,8 +77,13 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+<<<<<<< HEAD
         "DIRS": [
             BASE_DIR / 'templates'            
+=======
+        'DIRS': [
+            BASE_DIR / 'templates',
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -90,6 +115,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
+<<<<<<< HEAD
     # {
     #     "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     # },
@@ -102,6 +128,20 @@ AUTH_PASSWORD_VALIDATORS = [
     # {
     #     "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     # },
+=======
+    {
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 ]
 
 
@@ -120,18 +160,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+<<<<<<< HEAD
 STATIC_URL = "static/"    # static/images/a.jpg, static/css/main.css
+=======
+STATIC_URL = "static/" # static/images/a.jpg, static/css/main.css
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+<<<<<<< HEAD
 
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+=======
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
 from pybo.views import base_view
 
 urlpatterns = [
@@ -22,4 +23,11 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls'))
+=======
+from pybo import views
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path('pybo/',include('pybo.urls')),
+>>>>>>> f0cf70c187a02ef13c7821c4c612dbff267fc274
 ]
