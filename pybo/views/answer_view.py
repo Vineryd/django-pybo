@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, resolve_url
 from django.utils import timezone
 from ..models import Question, Answer
 from ..forms import  AnswerForm
@@ -20,7 +20,10 @@ def answer_create(request, question_id):
             answer.create_date = timezone.now()
             answer.question = question
             answer.save()
-            return redirect('pybo:detail', question_id=question.id)
+            # 애커 #answer_7 추가
+            url = resolve_url('pybo:detail', question_id=question.id)
+            url += f'#answer_{answer.id}'
+            return redirect(url)
     else:
         form = AnswerForm()
     context = {'question': question, 'form': form}
@@ -45,7 +48,9 @@ def answer_modify(request, answer_id):
             answer.author = request.user
             answer.modify_date = timezone.now()
             answer.save()
-            return redirect('pybo:detail', question_id=answer.question.id)
+            url = resolve_url('pybo:detail', question_id=answer.question.id)
+            url +=f'#answer_{answer.id}'
+            return redirect(url)
     else:
         form = AnswerForm(instance=answer)
 
